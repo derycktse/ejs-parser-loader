@@ -1,6 +1,6 @@
 {
   "name": "ejs-parser-loader",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "ejs loader for webpack",
   "main": "index.js",
   "scripts": {
@@ -20,5 +20,12 @@
   "devDependencies": {
     "html-webpack-plugin": "^2.28.0",
     "webpack": "^2.6.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:derycktse/ejs-parser-loader.git"
+  },
+  "bugs": {
+    "url": "https://github.com/derycktse/ejs-parser-loader/issues"
   }
 }
