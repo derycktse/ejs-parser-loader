@@ -1,20 +1,23 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const path = require('path')
+const id = require.resolve('../')
+console.log(`id:${id}`)
 module.exports = {
   entry: './entry.js',
   output: {
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    publicPath: '/'
   },
   module: {
     rules: [{
       test: /\.ejs$/,
-      loader : require.resolve("../"),
-      options:{
-        a:1
+      loader: id,
+      options: {
       }
     }]
   },
-  plugins : [ new HtmlWebpackPlugin({
-    template : 'index.ejs',
-    findname : 'index.html'
+  plugins: [new HtmlWebpackPlugin({
+    template: './template/index.ejs',
+    finename: 'index.html'
   })]
 }
